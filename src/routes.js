@@ -14,6 +14,8 @@ import Cleaning from './pages/Cleaning';
 import Maintenance from './pages/Maintenance';
 import CheckOut from './pages/CheckOut';
 import PageNotFound from './pages/PageNotFound';
+import Dropoffs from './pages/Dropoffs';
+import Reports from './pages/Reports';
 
 import { isAuthenticated } from './services/auth';
 
@@ -46,6 +48,8 @@ const Routes = () => (
       <PrivateRoute path="/cleanings" exact component={Cleaning} />
       <PrivateRoute path="/maintenances" exact component={Maintenance} />
       <PrivateRoute path="/checkouts" exact component={CheckOut} />
+      <PrivateRoute path="/dropoffs" exact component={Dropoffs} />
+      <PrivateRoute path="/reports" exact component={Reports} />
       <PrivateRoute path="/app" component={PageNotFound} />
       <Route path="*" component={PageNotFound} />
     </Switch>
