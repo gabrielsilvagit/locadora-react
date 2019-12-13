@@ -1,27 +1,21 @@
-import styled from "styled-components";
-
-export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-`;
+import styled from 'styled-components';
 
 export const Form = styled.form`
-  width: 400px;
+  width: 50%;
   background: #fff;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
   img {
     width: 100px;
     margin: 10px 0 40px;
   }
   p {
-    color: #ff3333;
+    color: #ffff00;
     margin-bottom: 15px;
-    border: 1px solid #ff3333;
+    border: 1px solid #ffff00;
     padding: 10px;
     width: 100%;
     text-align: center;
@@ -40,9 +34,9 @@ export const Form = styled.form`
     }
   }
   button {
-    color: #fff;
+    color: #191920;
     font-size: 16px;
-    background: #fc6963;
+    background: #ffff00;
     height: 56px;
     border: 0;
     border-radius: 5px;

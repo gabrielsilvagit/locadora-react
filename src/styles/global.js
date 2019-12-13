@@ -1,20 +1,41 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
+import dropdown from 'antd/es/dropdown/style/index.css';
+import menu from 'antd/es/menu/style/index.css';
 
-import "font-awesome/css/font-awesome.css";
+import override from './override.scss';
 
-createGlobalStyle`
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  outline: 0;
-}
-body, html {
-  background: #eee;
-  font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
-  text-rendering: optimizeLegibility !important;
-  -webkit-font-smoothing: antialiased !important;
-  height: 100%;
-  width: 100%;
-}
+export default createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+  ${dropdown}
+  ${menu}
+
+
+  ${override}
+
+  * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #191920 !important;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body, input, button {
+    font: 14px Roboto, sans-serif;
+  }
+
+  #root {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 20px 50px;
+  }
+
+  button {
+    cursor: pointer;
+  }
 `;
